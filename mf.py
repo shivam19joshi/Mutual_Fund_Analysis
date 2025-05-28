@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # 📁 Load dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv("mutual_fund_india.csv")
+df = pd.read_csv("mutual_fund_india.csv")
 df.columns = df.columns.str.replace(" ", "")
 
 # Streamlit UI
