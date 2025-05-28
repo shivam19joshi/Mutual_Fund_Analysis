@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # 📁 Load dataset
 @st.cache_data
 def load_data():
-    url = "https://github.com/shivam19joshi/Mutual_Fund_Analysis/blob/main/mutual_funds_india.csv"
+    url = "https://raw.githubusercontent.com/shivam19joshi/Mutual_Fund_Analysis/main/mutual_funds_india.csv"
     df = pd.read_csv(url)
     df.columns = df.columns.str.replace(" ", "")
     df = df.fillna(0)
