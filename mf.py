@@ -6,8 +6,13 @@ import matplotlib.pyplot as plt
 # 📁 Load dataset
 @st.cache_data
 def load_data():
-df = pd.read_csv("mutual_fund_india.csv")
-df.columns = df.columns.str.replace(" ", "")
+    df = pd.read_csv("mutual_fund_india.csv")  # or GitHub raw URL
+    df.columns = df.columns.str.replace(" ", "")
+    df = df.fillna(0)
+    return df
+
+# Load data
+df = load_data()
 
 # Streamlit UI
 st.title("Mutual Fund 1-Year Returns Explorer")
