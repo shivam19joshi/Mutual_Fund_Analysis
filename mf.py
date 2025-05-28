@@ -3,8 +3,10 @@ import pandas as pd
 import seaborn as sb
 import matplotlib.pyplot as plt
 
-# Load and preprocess data
-df = pd.read_csv("../DataSets/mutual_funds_india.csv")
+# 📁 Load dataset
+@st.cache_data
+def load_data():
+    df = pd.read_csv("mutual fund india.csv")
 df = df.fillna(0)
 df.columns = df.columns.str.replace(" ", "")
 
